@@ -1,16 +1,20 @@
 // check if a number is a prime number
 function ifPrimeNumber(number) {
   if (number < 1) {
-    return `${number} is not valid`;
+    return `${number} is not valid`;  // O(1)
   }
   for (let i = 2; i < number; i++) {
     if (number % i === 0) {
-      return `${number} is not a prime number`;
+      return `${number} is not a prime number`; //O(n)
     }
   }
-  return `${number} is a prime number`;
+  return `${number} is a prime number`; //O(1)
 }
 
+
+/**
+ * time complexity O(1)+O(n)+O(1) = O(n)
+ */
 console.log(ifPrimeNumber(-333));
 
 //check the largest number in an array
@@ -31,3 +35,5 @@ console.log(Math.round(1.9));
 console.log(Math.floor(1.9));
 
 console.log(Math.ceil(1.01));
+
+console.log(marks.length);
